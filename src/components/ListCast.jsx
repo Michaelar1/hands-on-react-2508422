@@ -1,5 +1,5 @@
-export default ({ cast, onChoice }) => {
-  return (
+export default ({cast, onChoice}) => {
+  return(
     <div style={{
       display: "grid",
       gridTemplateColumns: `repeat(auto-fit, minmax(90px, 1fr))`,
@@ -7,11 +7,11 @@ export default ({ cast, onChoice }) => {
       marginBottom: '1rem'
     }}>
       {
-        cast.map(member => (
-          <a onClick={() => { onChoice(member) }} key={member.id} data-tooltip={member.name}>
-            <img src={`images/${member.slug}_tn.svg`} alt={member.name} />
-          </a>
-        ))
+      cast.map(member => (
+        <a onClick={() => {onChoice(member)}} key={member.id} data-tooltip={member.name}>
+          <img src={`images/${member.slug}_tn.svg`} alt={member.name} />
+        </a>
+      ))
       }
     </div>
   )

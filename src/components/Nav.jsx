@@ -1,7 +1,5 @@
-import "./Nav.scss";
-
-export default ({ cast, onChoice }) => {
-  return (
+export default({cast, onChoice}) => {
+  return(
     <nav className="container">
       <ul>
         <li>
@@ -10,16 +8,17 @@ export default ({ cast, onChoice }) => {
             <ul role="listbox">
               {cast.map(member => (
                 <li key={member.id}>
-                  <a onClick={() => { onChoice(member) }}
-                    data-tooltip={member.name}>{member.name}</a>
+                  <a onClick={() => {onChoice(member)}} data-tooltip={member.name}>{member.name}</a>
                 </li>
               ))}
             </ul>
           </details>
-        </li>
+          </li>
       </ul>
       <ul>
-        <li><a href="#"><img style={{ height: '50px' }} src="images/logo_bug_stargazers.svg" alt="Stargazers Logo" /></a></li>
+        <li>
+          <a href="#"><img style={{height: '50px'}} src="images/logo_bug_stargazers.svg" alt="Stargazers" /></a>
+        </li>
       </ul>
     </nav>
   )
